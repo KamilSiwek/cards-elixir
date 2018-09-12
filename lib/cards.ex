@@ -55,4 +55,13 @@ defmodule Cards do
     end
   end
 
+  def create_hand(hand_size) do
+    # deck = Cards.create_deck
+    # deck = Cards.shuffle(deck)
+    # hand = Cards.deal(deck, hand_size)
+
+    # Pipe Operator:
+    Cards.create_deck |> Cards.shuffle |> Cards.deal(hand_size)
+  end
+
 end
